@@ -88,6 +88,11 @@ public class tela1 extends JFrame {
 		contentPane.add(btnCadastrarCaminho, gbc_btnCadastrarCaminho);
 		
 		JButton btnCadastrarMoto = new JButton("Cadastrar Moto");
+		btnCadastrarMoto.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MenuMoto.cadastrarMoto();
+			}
+		});
 		GridBagConstraints gbc_btnCadastrarMoto = new GridBagConstraints();
 		gbc_btnCadastrarMoto.insets = new Insets(0, 0, 5, 0);
 		gbc_btnCadastrarMoto.gridx = 2;
@@ -103,9 +108,14 @@ public class tela1 extends JFrame {
 		contentPane.add(lblConsultas, gbc_lblConsultas);
 		
 		JButton btnConsultarCarro = new JButton("Consultar caminh\u00F5es e carros");
+		btnConsultarCarro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MenuCarro.consultarCarro();
+			}
+		});
 		btnConsultarCarro.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent arg0) {
-				MenuCarro.consultarCarro();
+				
 			}
 		});
 		GridBagConstraints gbc_btnConsultarCarro = new GridBagConstraints();
@@ -117,6 +127,7 @@ public class tela1 extends JFrame {
 		JButton btnConsultarMotos = new JButton("Consultar Motos");
 		btnConsultarMotos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				MenuMoto.consultarMoto();
 			}
 		});
 		GridBagConstraints gbc_btnConsultarMotos = new GridBagConstraints();

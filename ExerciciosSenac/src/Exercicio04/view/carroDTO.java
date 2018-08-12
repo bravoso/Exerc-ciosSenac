@@ -12,4 +12,10 @@ public class carroDTO extends veículoDTO{
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String toString() {
+		return "Moto: [ID do Carro=" + getIdVeiculo() + ", Modelo= " + getModelo() + ", Fabricante="
+				+ getFabricante() + ", Placa=" + getPlaca() + ", Cor=" + getCor() + "]";
+	}
+
 }
